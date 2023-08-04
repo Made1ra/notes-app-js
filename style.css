@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Lato';
+    font-weight: 500;
+    font-size: 1em;
+    background-color: #efefef;
+}
+
+table {
+    text-align: center;
+    margin: 1em;
+    border-collapse: collapse;
+}
+
+thead {
+    color: #ffffff;
+    background-color: #808080;
+    padding: 1em;
+}
+
+th {
+    padding: 1.5em;
+    width: fit-content;
+}
+
+tr {
+    width: fit-content;
+}
+
+tbody tr {
+    background-color: rgba(176, 196, 222, 0.3);
+}
+
+td {
+    color: #808080;
+    padding: 1em;
+    word-wrap: normal;
+}
+
+tr td:first-child {
+    color: #000000;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 0.5em;
+    background-color: #d3d3d3;
+    font-weight: bold;
+    width: fit-content;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+label {
+    float: left;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 1em 0;
+    margin: 0 0 1em;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-button,
+.archive-button,
+.remove-button {
+    margin: 1em;
+}
+
+#summary-table {
+    margin-top: 1.5em;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    text-align: center;
+}
+
+#modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 1em;
+    border-radius: 0.1em;
+    box-shadow: 0 0 0.1em #0000004d;
+}
+
+#create-button {
+    margin: 0.5em 0.5em 2em;
+    padding: 1em;
+}
+
+#submit-button {
+    color: #ffffff;
+    background-color: #00c853;
+    float: left;
+    margin: 1em 0;
+    padding: 1em;
+}
+
+#cancel-button {
+    color: #ffffff;
+    background-color: #f44336;
+    float: left;
+    margin: 1em 1em 0;
+    padding: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    table {
+        width: max-content;
+        margin: 0;
+    }
+
+    .table-container {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #cancel-button {
+        float: none;
+        margin: 1em 0;
+    }
+}
